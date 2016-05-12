@@ -2,12 +2,24 @@
 // Copyright © 2016 The developers of rust1. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/lemonrock/rust1/master/COPYRIGHT.
 
 
-pub mod tcp;
-pub use tcp::TcpPort;
+use std::net::Ipv4Addr;
 
-pub mod udp;
-pub use udp::UdpPort;
 
-pub mod ipv4;
+// It would be nice to avoid the cost of constructing this, but it's not allowed in a static...
+#[inline(always)]
+pub fn localhost() -> Ipv4Addr
+{
+	Ipv4Addr::new(127, 0, 0, 1)
+}
 
-pub mod ipv6;
+#[inline(always)]
+pub fn unspecified() -> Ipv4Addr
+{
+	Ipv4Addr::new(0, 0, 0, 0)
+}
+
+#[inline(always)]
+pub fn broadcast() -> Ipv4Addr
+{
+	Ipv4Addr::new(255, 255, 255, 255)
+}
