@@ -11,3 +11,9 @@ pub fn localhost() -> Ipv6Addr
 {
 	Ipv6Addr::new(0, 0, 0, 0, 0, 0, 0, 1)
 }
+
+#[inline(always)]
+pub fn unspecified() -> Ipv6Addr
+{
+	Ipv6Addr::new(0, 0, 0, 0, 0, 0, 0, 0)
+}
