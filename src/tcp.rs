@@ -5,3 +5,4 @@
 pub type TcpPort = u16;
 
 pub const SyslogPort: TcpPort = 514;
+pub const SyslogOverTcpPort: TcpPort = 6514;
