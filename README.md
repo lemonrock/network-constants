@@ -3,9 +3,7 @@
 
 # network-constants
 
-[![Clippy Linting Result](https://clippy.bashy.io/github/lemonrock/network-constants/master/badge.svg?style=plastic)](https://clippy.bashy.io/github/lemonrock/network-constants/master/log) [![](https://img.shields.io/badge/Code%20Style-rustfmt-brightgreen.svg?style=plastic)](https://github.com/rust-lang-nursery/rustfmt#configuring-rustfmt)
-
-[network-constants] is a rust crate.
+[network-constants] is a rust crate that provides common network constants (eg port numbers) and related `pub type` definitions (eg for UDP ports). It is very much a work in progress; pull requests to add port numbers and the like very welcome.
 
 
 ## Licensing
